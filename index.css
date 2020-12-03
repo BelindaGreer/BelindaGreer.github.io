@@ -1,0 +1,23 @@
+
+/*Settings for boxes: sizes and positioning*/
+/*Includes @media query after each section for larger screen*/
+
+
+/*default screen*/
+html {width: 100vw; height: 100vh;}
+
+/*----- default (small screens)-----*/
+ 
+.gradient {
+
+  /* can be treated like a fallback */
+  background-color: orange;
+
+  /* will be "on top", if browser supports it */
+  background-image: linear-gradient(DarkOrchid, DodgerBlue);
+
+  /* these will reset other properties, like background-position, but it does know what you mean */
+  background: orange;
+  background: linear-gradient(DarkOrchid, DodgerBlue);
+
+}
