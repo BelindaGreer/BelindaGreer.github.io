@@ -6,6 +6,9 @@
 /*default screen*/
 html {width: 100vw; height: 100vh;}
 
+/*--fonts--*/
+h1 {padding: 2em;}
+
 /*----- default (small screens)-----*/
  
 .gradient {
@@ -20,4 +23,77 @@ html {width: 100vw; height: 100vh;}
   background: orange;
   background: linear-gradient(DarkOrchid, DodgerBlue);
 
+}
+
+header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 0.5em 0 black;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a {
+    color: white;
+    text-decoration: none;
+}
+
+.hidden {display: none;}
+
+@media (max-width: 599px) {
+  header .container {
+    width: 100%;
+  }
+  header h1 {
+    padding-left: 3%;
+	color: pink;
+  }
+  nav {
+    width: 100%;
+    top: 60px;
+  }
+  nav::before {
+     display: block;
+    position: absolute;
+    right: 3%;
+    top: -50px;
+    line-height: 40px;
+    font-size: 1.4em;
+    cursor: pointer;
+  }
+  nav ul {
+    background: pink;
+    width: 100%;
+    margin: 0px;
+  }
+  nav ul li {
+    float: none;
+  }
+  nav ul li a {
+    padding: 10px 3%;
+    line-height: 20px;
+    border-top: 1px solid #333;
+  }
+  
+  .hidden {display: block;}
+}
+
+body {
+    height: 125vh;
+    background-size: cover;
+    font-family: sans-serif;
+    margin-top: 80px;
+    padding: 30px;
 }
