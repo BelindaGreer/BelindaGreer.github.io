@@ -7,88 +7,108 @@
 html {width: 100vw; height: 100vh;}
 
 /*--fonts--*/
-h1 {padding: 2em;}
+h1 {padding: 0.5em; margin: 0; font-family: "Droid Serif"; font-style: italic;}
+h2 {font-family: "Droid Serif"; font-style: italic;}
 
 /*----- default (small screens)-----*/
  
 .gradient {
 
   /* can be treated like a fallback */
-  background-color: orange;
+  background-color: purple;
 
   /* will be "on top", if browser supports it */
   background-image: linear-gradient(DarkOrchid, DodgerBlue);
 
   /* these will reset other properties, like background-position, but it does know what you mean */
-  background: orange;
+  background: purple;
   background: linear-gradient(DarkOrchid, DodgerBlue);
 
 }
 
-header {
-    background-color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 0 0.5em 0 black;
-}
-
-header * {
-    display: inline;
-}
-
-header li {
-    margin: 20px;
-}
-
-header li a {
-    color: white;
-    text-decoration: none;
-}
+	header {
+		background-color: white;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 80px;
+		display: flex;
+		align-items: center;
+		box-shadow: 0 0 0.5em 0 black;
+	}
 
 .hidden {display: none;}
 
-@media (max-width: 599px) {
-  header .container {
-    width: 100%;
-  }
-  header h1 {
-    padding-left: 3%;
-	color: pink;
-  }
-  nav {
-    width: 100%;
-    top: 60px;
-  }
-  nav::before {
-     display: block;
-    position: absolute;
-    right: 3%;
-    top: -50px;
-    line-height: 40px;
-    font-size: 1.4em;
-    cursor: pointer;
-  }
-  nav ul {
-    background: pink;
-    width: 100%;
-    margin: 0px;
-  }
-  nav ul li {
-    float: none;
-  }
-  nav ul li a {
-    padding: 10px 3%;
-    line-height: 20px;
-    border-top: 1px solid #333;
-  }
-  
-  .hidden {display: block;}
+/*Navigation small screen*/
+
+		
+.button	{  
+	cursor: pointer;
+	position: relative;
+	left: 50%;
+	padding: 0.5rem;
+	background: transparent;
+	background-repeat: no-repeat;
+	border: none;
+	color: white;
 }
+
+nav { 
+	position: relative;
+	display: inline-block; 
+	}
+
+nav ul 	{		
+	display: none;
+	position: absolute;
+	background-color: #8d40bd;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 1em;
+	list-style: none;
+	margin: 0;
+	left: 2em;
+	}
+
+nav ul a{
+	padding: 0.5em;
+	display: block;
+	text-decoration: none;
+	color: #f8f8ff;
+}
+
+ul > li{ width: 100%;}
+
+
+@media all and (min-width: 599px){
+
+
+	header * {
+		display: inline;
+	}
+
+	header li {
+		margin: 20px;
+	}
+
+
+	
+	nav ul li{
+		display: inline-block;
+	}
+	
+	nav ul li a {
+		color: white;
+		text-decoration: none;
+	}
+	
+	.button {display: none;}
+	
+
+	
+	
+}
+
 
 body {
     height: 125vh;
